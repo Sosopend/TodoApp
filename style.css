@@ -3,5 +3,6 @@
 }
 
 .task-zone {
+  max-width: 1200px;
   background-color: lavenderblush;
 }
