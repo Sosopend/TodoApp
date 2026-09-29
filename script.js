@@ -1,4 +1,4 @@
-let taskValue = "";
+let taskValue = input;
 
 button.addEventListener(click) {
 
