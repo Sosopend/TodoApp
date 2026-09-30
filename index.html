@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <title>TodoApp</title>
   </head>
   <body>
     <h1>My tasks list</h1>
     <form action="" method="get">
       <div class="form-task"> 
-      <input type="text" name"add-task" placeholder="Write a task...">
-        <button>Add</button>
+      <input id="myField" type="text" name="add-task" placeholder="Write a task...">
+        <button type="submit" id="myButton">Add</button>
       </div>
       <div class="task-zone">
       </div>
