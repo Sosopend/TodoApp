@@ -1,8 +1,4 @@
-* {
-  background-color: beige;
-}
-
-.task-zone {
-  max-width: 1200px;
+#task-zone {
+  padding: 10px;
   background-color: lavenderblush;
 }
