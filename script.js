@@ -4,13 +4,23 @@ const button = document.getElementById("myButton")
 function addTask() {
     const taskValue = form.value;
     const taskZone = document.getElementById("task-zone");
-    // const counter = document.getElementById("counter");
     const newDiv = document.createElement("div");
+    const newDelete = document.createElement("p");
     const newTask = document.createTextNode(taskValue);
+    const counter = document.getElementById("counter");
     
-    newDiv.appendChild(newTask);
+    if(taskValue === ""){
+        alert("Can't be empty");
+    } else {
+        newDiv.appendChild(newTask);
 
-    document.body.insertBefore(newDiv, taskZone);}
+        taskZone.insertBefore(newDiv, counter);
+
+        form.value = "";
+    }
+    
+    
+}
 
 button.addEventListener("click", function() {
     
