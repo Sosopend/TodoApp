@@ -10,6 +10,8 @@ function addTask() {
     const newTask = document.createTextNode(taskValue);
     const counter = document.getElementById("counter");
     const newTaskGroup = document.createElement("div");
+    const taskGroupClassCount = document.querySelectorAll(".task-group").length;
+    let taskGroupId = 0;
     
     if(taskValue === ""){
         alert("Can't be empty");
@@ -18,16 +20,22 @@ function addTask() {
         
         newTaskP.appendChild(newTask);
 
-        // taskZone.insertBefore(newTaskP, counter);
-
         newDelete.appendChild(newDeleteContent);
 
         newTaskGroup.appendChild(newTaskP);
         newTaskGroup.appendChild(newDelete);
 
-        // taskZone.insertBefore(newDelete, counter);
-
         form.value = "";
+
+        newTaskGroup.classList.add("task-group");
+
+        if(taskGroupClassCount === taskGroupId) {
+            taskGroupId = taskGroupId + 1;
+            newTaskGroup.id = taskGroupId;
+        }
+        console.log(taskGroupClassCount, "class");
+        console.log(taskGroupId, "id");
+
     }    
 }
 
