@@ -1,5 +1,6 @@
-const form = document.getElementById("myField")
-const button = document.getElementById("myButton")
+const form = document.getElementById("myField");
+const button = document.getElementById("myButton");
+let taskGroupId = 0;
 
 function addTask() {
     const taskValue = form.value;
@@ -11,7 +12,6 @@ function addTask() {
     const counter = document.getElementById("counter");
     const newTaskGroup = document.createElement("div");
     const taskGroupClassCount = document.querySelectorAll(".task-group").length;
-    let taskGroupId = 0;
     
     if(taskValue === ""){
         alert("Can't be empty");
@@ -31,8 +31,12 @@ function addTask() {
 
         if(taskGroupClassCount === taskGroupId) {
             taskGroupId = taskGroupId + 1;
-            newTaskGroup.id = taskGroupId;
         }
+
+        newTaskGroup.id = taskGroupId;
+
+        
+        
         console.log(taskGroupClassCount, "class");
         console.log(taskGroupId, "id");
 
