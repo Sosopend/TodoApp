@@ -12,12 +12,12 @@ function addTask() {
     const counter = document.getElementById("counter");
     const newTaskGroup = document.createElement("div");
     const taskGroupClassCount = document.querySelectorAll(".task-group").length;
-    
-    if(taskValue === ""){
+
+    if (taskValue === "") {
         alert("Can't be empty");
     } else {
         taskZone.insertBefore(newTaskGroup, counter);
-        
+
         newTaskP.appendChild(newTask);
 
         newDelete.appendChild(newDeleteContent);
@@ -29,24 +29,29 @@ function addTask() {
 
         newTaskGroup.classList.add("task-group");
 
-        if(taskGroupClassCount === taskGroupId) {
+        if (taskGroupClassCount === taskGroupId) {
             taskGroupId = taskGroupId + 1;
         }
 
         newTaskGroup.id = taskGroupId;
 
         function deleteTask(newDelete) {
-    newDelete.parentElement.remove();
+            newDelete.parentElement.remove();
+        }
+
+        newDelete.addEventListener("click", function () {
+            deleteTask(newDelete);
+        })
+    }
+
+    function doneTask() {
+        
+    }
+
 }
 
-newDelete.addEventListener("click", function() {
-    deleteTask(newDelete);
-})
-    }    
-}
+button.addEventListener("click", function () {
 
-button.addEventListener("click", function() {
-    
-    
+
     addTask();
 })
