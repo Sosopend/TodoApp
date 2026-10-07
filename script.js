@@ -45,8 +45,21 @@ function addTask() {
     }
 
     function doneTask() {
-        
+        if (newTaskGroup.classList.contains("done")){
+            newTaskGroup.classList.remove("done");
+        } else if (!newTaskGroup.classList.contains("done")) {
+            newTaskGroup.classList.add("done");
+        }
+        if (newTaskGroup.classList.contains("done")) {
+            newTaskGroup.style.backgroundColor = "green";
+        } else if (!newTaskGroup.classList.contains("done")) {
+            newTaskGroup.style.backgroundColor = "white";
+        }
     }
+
+    newTaskP.addEventListener("click", function(){
+        doneTask();
+    })
 
 }
 
