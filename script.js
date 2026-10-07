@@ -35,16 +35,14 @@ function addTask() {
 
         newTaskGroup.id = taskGroupId;
 
-        
-        
-        console.log(taskGroupClassCount, "class");
-        console.log(taskGroupId, "id");
-
-    }    
+        function deleteTask(newDelete) {
+    newDelete.parentElement.remove();
 }
 
-function deleteTask() {
-    
+newDelete.addEventListener("click", function() {
+    deleteTask(newDelete);
+})
+    }    
 }
 
 button.addEventListener("click", function() {
